@@ -29,6 +29,7 @@
   font-weight: var(--fw-bold);
   font-size: var(--fs-base);
   line-height: 1.5;
+  text-transform: uppercase;
 }
 .paragraph-large{
   font-family: var(--ff-rflex);
@@ -61,6 +62,37 @@
   font-size: var(--fs-base);
   font-weight: var(--fw-bold);
   line-height: 1.5;
+}
+
+.gradient-border {
+  border: 5px solid transparent;
+  border-image: linear-gradient(
+    to right, 
+    var(--accent-green) 0%, 
+    var(--accent-lime) 14.84%, 
+    var(--accent-red) 32.15%, 
+    var(--accent-pink) 65.79%, 
+    var(--accent-blue) 84.58%
+  );
+  border-image-slice: 1;
+}
+
+
+.gradient-background {
+  background: linear-gradient(
+    to right, 
+    var(--accent-pink) 0%, 
+    var(--accent-blue) 98.93%
+  );
+}
+
+
+.gradient-content {
+  background: linear-gradient(
+    to bottom, 
+    var(--content-secondary) 0%, 
+    var(--background-gray) 100%
+  );
 }
 
 

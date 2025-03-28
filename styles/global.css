@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font: inherit;
 }
 
 :root{
@@ -20,7 +21,7 @@
 
   --accent-pink: #D586E0;
   --accent-blue: #91A1FA;
-  --accent-green: #77C0AA;
+  --accent-green: #77C0AF;
   --accent-lime: #D1DC97;
   --accent-red: #E9A9B3;
 
@@ -52,4 +53,16 @@ html{
 }
 body{
   background-color: var(--background-primary);
+}
+
+ul[role="list"]{
+  list-style: none;
+}
+
+
+
+@media (width <= 70em){
+  :root{
+    --fs-3xl: 2.5rem; 
+  }
 }
