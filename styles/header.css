@@ -1,0 +1,23 @@
+header{
+  --max-width: 80em;
+  display: flex;
+  justify-content: start;
+  padding-top: 4.75rem;
+  max-width: var(--max-width);
+  width: calc(100% - 7.5rem * 2);
+  margin-inline: auto;
+}
+
+@media (width <= 70em){
+  header{
+    --max-width: 375px;
+    justify-content: center;
+    padding-top: 2.75rem;
+    width: calc(100% - 6.8125rem * 2);
+    margin-inline: auto;
+  }
+  .desktop-only{
+    display: none;
+  }
+  
+}
