@@ -1,0 +1,55 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  /*palete de cores*/
+  --content-primary: #FFFFFF;
+  --content-secondary: #C7C9CC;
+  --content-tertiary: #D9D9D9;
+  --content-brand: #C58DE7;
+  --color-inverse: #030203;
+
+  --background-primary: #020202;
+  --background-secondary: #111012;
+  --background-tertiary: #24222E;
+  --backgroound-brand: #C58DE7;
+  --background-gray: #3D3D3D;
+
+  --accent-pink: #D586E0;
+  --accent-blue: #91A1FA;
+  --accent-green: #77C0AA;
+  --accent-lime: #D1DC97;
+  --accent-red: #E9A9B3;
+
+  /*tipografia: sora, roboto flex, roboto mono*/
+  --ff-sora: "Sora", sans-serif;
+  --ff-rmono: "Roboto Mono", sans-serif;
+  --ff-rflex: "Roboto Flex", sans-serif;
+
+  --fw-extra-bold: 800;
+  --fw-bold: 700;
+  --fw-medium: 500;
+
+  --fs-3xl: 4.5rem; /* 72px */
+  --fs-2xl: 2.5rem; /* 40px */
+  --fs-xl: 2rem;  /* 32px */
+  --fs-lg: 1.25rem; /* 20px */
+  --fs-base: 1rem; /* 16px */
+  --fs-sm: 0.875rem;  /* 14px */
+  --fs-xs: 0.75rem; /* 12px */
+}
+
+html{
+  font-family: var(--ff-rflex);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-base);
+  line-height: 1.25rem;
+  letter-spacing: 0;
+  color: var(--content-secondary);
+}
+body{
+  background-color: var(--background-primary);
+}
