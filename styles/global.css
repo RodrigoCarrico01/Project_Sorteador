@@ -59,7 +59,10 @@ ul[role="list"]{
   list-style: none;
 }
 
-
+button{
+  border: 0;
+  outline: 0;
+}
 
 @media (width <= 70em){
   :root{

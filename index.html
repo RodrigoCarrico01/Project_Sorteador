@@ -20,7 +20,44 @@
         <h1 class="display-large">SORTEADOR DE NÚMEROS</h1>
       </div>
       <div class="content-form">
-        <form>teste</form>
+        <h3 class="label-medium">Quero sortear:</h3>
+        <p class="paragraph-large">defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+        <form>
+
+          <div class="input-wrapper">
+            <div class="input-card">
+              <label for="quantity">NÚMEROS</label>
+              <div class="gradient-wrapper">
+               <input class="input-style" id="quantity" type="text" required>
+              </div>
+            </div>
+            <div class="input-card">
+              <label for="first-number">DE</label>
+              <div class="gradient-wrapper">
+              <input  class="input-style" id="first-number" type="text" required>
+            </div>
+            </div>
+            <div class="input-card">
+              <label for="last-number">A</label>
+              <div class="gradient-wrapper">
+              <input  class="input-style" id="last-number" type="text" required>
+            </div>
+            </div>
+          </div>
+
+            <label class="switch">
+              <input type="checkbox" id="no-repeat" />
+              <span class="slider"></span>
+              Não repetir número
+            </label>
+
+            
+            <button class="customized-btn" type="submit">
+              <span class="label-medium">Sortear</span>
+              <img src="assets/icons/arrow.svg" alt="arrow que aponta para a direita">
+            </button>
+
+        </form>
       </div>
       <div class="content-questions">
         <ul role="list" class="questions">
@@ -46,5 +83,6 @@
       </div>
     </div>
   </main>
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>
