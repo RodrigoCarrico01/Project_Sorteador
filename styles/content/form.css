@@ -1,0 +1,74 @@
+.content-form{
+  grid-area: form;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: end;
+  max-width: 30.125rem;
+  & h3{
+    text-transform: uppercase;
+    color: var(--content-primary);
+  }
+  & form{
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    & .input-wrapper{
+      display: flex;
+      flex-direction: row;
+      gap: 1.25rem;
+      & .input-card{
+        max-width: 5.375rem;
+        max-height: 5.5rem;
+
+        display: flex;
+
+        align-items: center;
+        justify-self: start;
+
+        flex-direction: column;
+        width: fit-content;
+        & label{
+          margin-bottom: .5rem;
+          transition: color 0.3s ease;
+        }
+        & .hovered{
+          color: var(--content-brand);
+        }
+        & input{
+          width: 100%;
+          height: 3.5rem;
+          padding-inline: .5rem;
+          padding-block: .25rem;
+          gap: .25rem;
+        }
+      }
+    }
+    & button{
+      margin-top: 1.25rem;
+      line-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+    }
+  }
+}
+
+
+@media (width <= 70em){
+ .content-form{
+    & form{
+      & .input-wrapper{
+        & .input-card{
+          justify-self: center;
+        }
+      }
+      & button{
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}

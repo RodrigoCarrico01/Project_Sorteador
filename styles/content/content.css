@@ -1,0 +1,14 @@
+.content{
+  display: grid;
+  grid-template-areas: 
+  "info form"
+  "question form";
+  grid-template-columns: auto auto;
+}
+
+@media (width <= 70em){
+  .content{
+    display: flex;
+    flex-direction: column;
+  }
+}

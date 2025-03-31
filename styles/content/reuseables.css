@@ -1,0 +1,105 @@
+.gradient-wrapper{
+  position: relative;
+  padding: 1px;
+  border-radius: .5rem;
+  background: transparent;
+  &::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: .5rem;
+    padding: 1px;
+    background: linear-gradient(
+      to right, 
+      var(--accent-green) 0%, 
+      var(--accent-lime) 14.84%, 
+      var(--accent-red) 32.15%, 
+      var(--accent-pink) 65.79%, 
+      var(--accent-blue) 84.58%
+    );
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:hover::before{
+    opacity: 1;
+  }
+  &:focus-within::before{
+    opacity: 1;
+  }
+}
+
+.input-style{
+  position: relative;
+  z-index: 1;
+  border: none;
+  outline: none;
+
+  border-radius: .5rem;
+  background-color: var(--background-secondary);
+  font-family: var(--ff-sora);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-xl);
+  line-height: 1.3;
+  color: var(--content-primary);
+}
+
+.customized-btn{
+  gap: .5rem;
+  border-radius: .5rem;
+  padding: 1rem;
+  background-color: var(--background-tertiary);
+  transition: .3s background-color ease-in-out;
+  &:focus, &:hover{
+    background-color: #312e3d;
+  }
+  & span{
+    text-transform: uppercase;
+    color: var(--content-primary);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
+.switch {
+  padding-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  & input{
+    display: none;
+  }
+  & .slider {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 999px;
+    transition: background-color 0.3s;
+    &::before{
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      width: 14px;
+      height: 14px;
+      background-color: white;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+  }
+
+  & input:checked + .slider {
+    background: linear-gradient(135deg, #c084fc, #a855f7); /* lilás/roxo */
+  }
+  
+  & input:checked + .slider::before {
+     transform: translateX(10px);
+  }
+}

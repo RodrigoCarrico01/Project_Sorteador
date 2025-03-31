@@ -1,0 +1,19 @@
+.content-questions{
+  grid-area: question;
+  & .questions{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    & .question-card{
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: .5rem;
+      & .question{
+        color: var(--content-brand);
+      }
+      & .response{
+        max-width: 24.125rem;
+      }
+    }
+  }
+}

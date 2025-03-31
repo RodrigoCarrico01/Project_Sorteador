@@ -1,0 +1,33 @@
+.content-info{
+  max-width: 32rem;
+  grid-area: info;
+  margin-right: auto;
+  & h5{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+    color: transparent; 
+    padding-bottom: .75rem;
+  }
+  & h1{
+    color: var(--content-primary);
+    padding-bottom: 2.375rem;
+  }
+}
+
+@media (width <= 70em){
+ .content-info{
+      & h5{
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text; 
+        color: transparent; 
+        padding-bottom: .5rem;
+      }
+      & h1{
+        color: var(--content-primary);
+        padding-bottom: 2.375rem;
+      }
+
+  }
+}
