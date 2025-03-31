@@ -2,6 +2,10 @@
   max-width: 32rem;
   grid-area: info;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
   & h5{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
