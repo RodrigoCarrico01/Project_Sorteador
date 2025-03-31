@@ -126,8 +126,27 @@
       padding-top: 2.5rem;
       padding-bottom: 2.5rem;
       display: flex;
-      gap: .5rem;
       justify-content: center;
+      color: var(--content-brand);
+      font-family: var(--ff-rflex);
+      font-weight: var(--fw-bold);
+      font-size: 3rem;
+      letter-spacing: 0;
+      line-height: 1.5;
+      & .response-card{
+        gap: .25rem;
+        padding-block: 1.125rem;
+        padding-inline: 1.375rem;
+        border-radius: 1.75rem;
+        &:nth-child(1){
+          opacity: 0;
+          animation: fadeIn .5s ease-in forwards;
+        }
+        &:nth-child(2){
+          opacity: 0;
+          animation: fadeIn .5s ease-in 1s forwards;
+        }
+      }
     }
 
     & button{
@@ -135,10 +154,18 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      opacity: 0;
+      animation: fadeIn .5s ease-in 2s forwards;
     }
   }
 }
 
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 @media (width <= 70em){
   .content{
     display: flex;
