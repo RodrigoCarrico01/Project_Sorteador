@@ -149,6 +149,10 @@
   border-radius: .5rem;
   padding: 1rem;
   background-color: var(--background-tertiary);
+  transition: .3s background-color ease-in-out;
+  &:focus, &:hover{
+    background-color: #312e3d;
+  }
   & span{
     text-transform: uppercase;
     color: var(--content-primary);
