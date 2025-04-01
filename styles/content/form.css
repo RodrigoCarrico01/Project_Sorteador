@@ -15,6 +15,11 @@
       & .input-card{
         max-width: 6.2rem;
         & label{
+
+          display: flex;
+          flex-direction: column;
+          position: relative;
+
           & span{
             font-weight: 500;
           }
@@ -37,7 +42,29 @@
             padding-inline: .5rem;
             padding-block: .25rem;
             gap: .25rem;
+            &:hover, &:focus, &:active{
+              border: 2px solid transparent;
+              background-image:
+                linear-gradient(var(--background-secondary), var(--background-secondary)),
+                linear-gradient(45deg, 
+                  var(--accent-pink), 
+                  var(--accent-blue), 
+                  var(--accent-green), 
+                  var(--accent-lime), 
+                  var(--accent-red)
+                );
+              background-origin: border-box;
+              background-clip: padding-box, border-box;
+              transition: all 0.3s ease;
+            }
           }
+        }
+        &:hover span, &:focus-within span{
+          background: var(--accent-pink);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: all 0.3s ease;
         }
       }
     }
@@ -79,6 +106,7 @@
     }
     & button{
       display: flex;
+      position: relative;
       align-items: center;
       justify-content: center;
       gap: .5rem;
@@ -89,6 +117,42 @@
       text-transform: uppercase;
       color: var(--content-primary);
       width: 100%;
+      transition: .2s transform ease-in, .2s background-color ease-in;
+      overflow: hidden;
+      &::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 0.5rem;
+        padding: 2px; 
+        background: linear-gradient(
+          270deg,
+          var(--accent-pink),
+          var(--accent-blue),
+          var(--accent-green),
+          var(--accent-lime),
+          var(--accent-red),
+          var(--accent-pink) 
+        );
+        background-size: 600% 600%; 
+        z-index: 0;
+
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        pointer-events: none;
+        opacity: 0;
+
+      }
+      &:hover::before {
+        animation: moveGradient 6s ease infinite;
+        opacity: 1;
+      }
+      &:hover{
+        transform: scale(1.02);
+        background-color: #373444;
+      }
       & .label-medium{
         font-weight: 500;
       }
@@ -101,6 +165,17 @@
 
 
 
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 @media (width <= 70em){
   .content-form{
