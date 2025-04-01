@@ -3,7 +3,7 @@
   grid-template-areas: 
   "info form"
   "question form";
-  grid-template-columns: auto auto;
+  grid-template-columns: 1.5fr 1fr;
 }
 
 @media (width <= 70em){
