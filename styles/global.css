@@ -53,6 +53,10 @@ html{
 }
 body{
   background-color: var(--background-primary);
+  background-image: url("../assets/background.png");
+  background-size: cover; 
+  background-position: center;
+  background-repeat: repeat;
 }
 
 ul[role="list"]{
