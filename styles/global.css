@@ -75,6 +75,10 @@ button{
   outline: 0;
 }
 
+.hidden{
+  display: none;
+}
+
 @media (width <= 70em){
   :root{
     --fs-3xl: 2.5rem; 
